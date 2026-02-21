@@ -21,6 +21,11 @@ unsigned long long max(unsigned long long x, unsigned long long y) {
     return (x > y ? x : y);
 }
 
+void add(longNumber *a, const longNumber *b);
+void increaseSize(longNumber *a);
+void setZero(longNumber *a);
+
+
 // dynamic, returned str is responsibility of the caller
 char *longNumberToStr(longNumber *a) {
     char *str = (char *)calloc(a->length * LOGBASE10 + 10, sizeof(char));
